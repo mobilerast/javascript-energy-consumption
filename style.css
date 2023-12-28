@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-theme header, body.dark-theme footer {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme a, body.dark-theme .social-links a {
+    color: #9ecfff;
+}
+
+body.dark-theme .social-links a:hover {
+    color: #f0db4f;
+}
+
+.energy-consumption {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: white; 
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #66bb6a;
+}
+
+.social-links i {
+    margin-right: 5px;
+    font-size: 1.2em;
+}
